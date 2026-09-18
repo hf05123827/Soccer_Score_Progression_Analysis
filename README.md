@@ -1,2 +1,3 @@
 # Soccer_Score_Progression_Analysis
 サッカーの得点遷移の傾向を分析し、得点予測モデルの改善をする。
+Empirical_Analysis
