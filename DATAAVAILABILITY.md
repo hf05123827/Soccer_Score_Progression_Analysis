@@ -14,6 +14,5 @@
   - Frauen-Bundesliga 2023/24
   - FA Women's Super League 2018/19, 2019/20, 2020/21, 2023/24
 
-<StatsBombロゴをここに掲載>
 
 > Data provided by [StatsBomb](https://statsbomb.com)
