@@ -1,0 +1,12 @@
+n_matches,n_teams,n_params,log_likelihood,AIC,BIC,converged,message,league,season,file
+107,11,35,-99.53371600863215,269.0674320172643,362.616441223431,True,Optimization terminated successfully.,FA Women's Super League,2018/2019,WSL2018-2019_goals_and_red_cards.csv
+87,12,37,-60.416851184460135,194.83370236892029,286.07230275913986,True,Optimization terminated successfully.,FA Women's Super League,2019/2020,WSL2019-2020_goals_and_red_cards.csv
+131,12,37,-93.35716991718093,260.71433983436185,367.09664079280446,True,Optimization terminated successfully.,FA Women's Super League,2020/2021,WSL2020-2021_goals_and_red_cards.csv
+132,12,37,-79.78453222489479,233.56906444978958,340.23273558548533,True,Optimization terminated successfully.,FA Women's Super League,2023/2024,WSL2023-2024_goals_and_red_cards.csv
+132,12,37,-1000000092.280193,2000000258.560386,2000000365.224057,True,"[WARNING] Even after convergence, 1 match(es) still have non-positive scoring intensity, so a -1e9 penalty has leaked into the log-likelihood. The log-likelihood/AIC/BIC values are not reliable. Optimization terminated successfully.",Frauen Bundesliga,2023/2024,FB2023-2024_goals_and_red_cards.csv
+115,11,35,-121.81860055195764,313.6372011039153,409.709825596629,True,Optimization terminated successfully.,Indian Super league,2021/2022,ISL2021-2022_goals_and_red_cards.csv
+380,20,53,-522.217689516305,1150.43537903261,1359.264455426793,True,Optimization terminated successfully.,La Liga,2015/2016,LL2015-2016_goals_and_red_cards.csv
+240,16,45,-162.2867741678852,414.5735483357704,571.2022998861601,True,Optimization terminated successfully.,Liga F,2023/2024,LF2023-2024_goals_and_red_cards.csv
+377,20,53,-581.026933948531,1268.053867897062,1476.4628628318064,True,Optimization terminated successfully.,Ligue 1,2015/2016,L12015-2016_goals_and_red_cards.csv
+380,20,53,-555.593544958096,1217.187089916192,1426.016166310375,True,Optimization terminated successfully.,Premier League,2015/2016,PL2015-2016_goals_and_red_cards.csv
+380,20,53,-574.1557220862935,1254.311444172587,1463.14052056677,True,Optimization terminated successfully.,Serie A,2015/2016,SA2015-2016_goals_and_red_cards.csv
