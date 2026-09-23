@@ -6,6 +6,7 @@
 　*Dixon&Robinson* (1998)モデルは0-0、1-0のような得点状況ごとにハザードを変化させている。このような分類の他に考慮することのできる特徴を抽出するために得点間の待ち時間に対し、経験的な分析をする。  
 
 ## Models
-　**Empirical_Analysis**で抽出した特徴をハザードなどのモデリングに組み込み、既存の*Dixon&Robinson* (1998)モデルと比較する。
+　**Empirical_Analysis**で抽出した特徴をハザードなどのモデリングに組み込み、既存の*Dixon&Robinson* (1998)モデルと比較する。  
+　モデルの詳細は[Models/README.md](Models/README.md)を参照。
 
 
