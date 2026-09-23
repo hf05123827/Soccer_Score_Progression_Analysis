@@ -18,3 +18,26 @@
 > Data provided by [StatsBomb](https://statsbomb.com)
 >
 > ※StatsBomb公式のMedia Pack（ロゴ配布ページ）が現在リンク切れとなっているため、テキストでのクレジット表記としています。
+
+---
+
+# Data Availability (English)
+
+This project uses event data provided by **StatsBomb**
+([StatsBomb Open Data](https://github.com/statsbomb/open-data)).
+This data is used for research and analysis purposes, on a non-commercial basis.
+
+- **Data source:** StatsBomb (https://statsbomb.com)
+- **Competitions / seasons covered:**
+  - Premier League 2015/16
+  - Serie A 2015/16
+  - Ligue 1 2015/16
+  - Liga F 2023/24
+  - La Liga 2015/16
+  - Indian Super League 2021/22
+  - Frauen-Bundesliga 2023/24
+  - FA Women's Super League 2018/19, 2019/20, 2020/21, 2023/24
+
+> Data provided by [StatsBomb](https://statsbomb.com)
+>
+> *Note: StatsBomb's official Media Pack (logo download page) is currently unreachable, so a text-only credit is used here instead of the brand logo.*
