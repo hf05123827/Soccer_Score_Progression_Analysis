@@ -1,7 +1,8 @@
 # Models
 
 ## 1. 本研究の目的
-　本研究の目的は、*Dixon&Robinson* (1998)モデルの改善である。
+　本研究の目的は、*Dixon&Robinson* (1998)モデルの改善である。  
+
 **Empirical_Analysis** で抽出した得点の傾向をハザードのモデリングに組み込み、*Dixon&Robinson* (1998)モデルと比較する。
 
 ## 2. Dixon & Robinson (1998) モデルの概要
