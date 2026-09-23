@@ -1,16 +1,21 @@
 # Models
 
-## Dixon & Robinson (1998) モデル
+## 1. 本研究の目的
+　本研究の目的は、*Dixon&Robinson* (1998)モデルの改善である。
+**Empirical_Analysis** で抽出した得点の傾向をハザードのモデリングに組み込み、元のモデルとAIC・BICで比較する。
+
+## 2. Dixon & Robinson (1998) モデルの概要
+**ファイル:** `dixon_robinson_model.ipynb`
 
 Dixon, M. J. and Robinson, M. E. (1998). *A birth process model for association football matches.* The Statistician, 47(3), 523–538.
 
-### 概要
 　ホームチームとアウェイチームの得点を、それぞれ**非同次ポアソン過程**（二変量の出生過程）として扱うモデル。
 得点の強度（ハザード）は、両チームの実力に加えて**その時点のスコア状況**や**試合の経過時間**によって変化する。
 これにより、「リードしているチームは得点しにくくなる」「終盤ほど得点が増える」といった試合中の得点の推移を表現できる。
 
-　本リポジトリの `dixon_robinson_model.ipynb` では、論文で最も当てはまりが良いとされる**モデルVI**を、
+　`dixon_robinson_model.ipynb` では、論文で最も当てはまりが良いとされる**モデルVI**を、
 退場者（レッドカード）の効果を除いた形で実装し、StatsBombデータの各リーグ・シーズンに適用している。
+推定結果は `dixon_robinson_pure_results/` に保存される。
 
 ### 得点強度
 　試合時間を $t \in [0, 1]$ に正規化し（90分 = 1）、ホームチーム $i$ とアウェイチーム $j$ の対戦における
@@ -53,15 +58,31 @@ Dixon, M. J. and Robinson, M. E. (1998). *A birth process model for association 
 L = \exp\left(-\int_0^1 \lambda(t)\,dt\right)\exp\left(-\int_0^1 \mu(t)\,dt\right)\prod_{l=1}^{m} \lambda(t_l)^{1-J_l}\,\mu(t_l)^{J_l}
 ```
 
-となる。全試合の尤度の積を最大化してパラメータを推定し、AIC・BICでモデルを比較する。
+となる。全試合の尤度の積を最大化してパラメータを推定する。
 
-## 拡張モデル：直近得点者モデル
-　**Empirical_Analysis/Match_Status** の分析をもとに、スコア状況の区分を「リード／同点／ビハインド」×「直前に得点したのは自チームか相手か」に置き換えたモデル。
-各チームから見た状態を次の7区分とし、倍率はホーム・アウェイで共有する。
+## 3. その他のファイル
 
-- 0-0（基準）
-- リード中かつ直近得点 / リード中かつ直近失点
-- ビハインド中かつ直近得点 / ビハインド中かつ直近失点
-- 同点かつ直近得点 / 同点かつ直近失点
+### 直近得点者モデル
+**ファイル:** `recent_scorer_model.ipynb`
 
-　それ以外の構造（$\alpha, \beta, \gamma_h, \rho, \xi$）はモデルVIと同じ。モデルVIとの比較はAIC・BICで行う。
+　**Empirical_Analysis/Match_Status** の分析をもとに、モデルVIのスコア状況の区分を
+「リード／同点／ビハインド」×「直前に得点したのは自チームか相手か」に置き換えたモデル。
+各チームから見た状態を次の7区分とし、倍率 $\theta_s$ はホーム・アウェイで共有する。
+
+| 区分 | 内容 |
+|---|---|
+| 0-0（基準） | 試合開始時点 |
+| リード中かつ直近得点 | リードしていて、最後の得点が自チーム |
+| リード中かつ直近失点 | リードしていて、最後の得点が相手 |
+| ビハインド中かつ直近得点 | ビハインドで、最後の得点が自チーム |
+| ビハインド中かつ直近失点 | ビハインドで、最後の得点が相手 |
+| 同点かつ直近得点 | 0-0以外の同点で、最後の得点が自チーム |
+| 同点かつ直近失点 | 0-0以外の同点で、最後の得点が相手 |
+
+```math
+\lambda(t) = \rho(t)\left(\alpha_i \beta_j \gamma_h \cdot \theta_{s_H(t)} + \xi_1 t\right), \qquad
+\mu(t) = \rho(t)\left(\alpha_j \beta_i \cdot \theta_{s_A(t)} + \xi_2 t\right)
+```
+
+　$s_H(t), s_A(t)$ はそれぞれホーム・アウェイから見た時刻 $t$ の状態。
+それ以外の構造（$\alpha, \beta, \gamma_h, \rho, \xi$）はモデルVIと同じ。推定結果は `recent_scorer_results/` に保存される。
