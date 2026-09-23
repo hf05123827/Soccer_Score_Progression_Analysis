@@ -8,7 +8,7 @@
 
 　本研究の目的は、このモデルの改善である。
 StatsBombのイベントデータを用いて得点間の待ち時間を経験的に分析し、スコア状況の区分以外にハザードに影響する特徴を抽出する。
-抽出した特徴をモデルに組み込み、元のモデルと比較する。
+抽出した特徴をモデルに組み込み、元のモデルとAIC・BICで比較する。
 
 ## 研究の流れ
 1. **Empirical_Analysis**：得点間の待ち時間を生存時間分析（Kaplan-Meier曲線・ログランク検定）などで分析し、ハザードに影響する特徴を探す。
@@ -30,21 +30,13 @@ Soccer_Score_Progression_Analysis/
 　得点間の待ち時間に影響を与える要因を、**実力差**・**試合状況**・**時間帯**の3つに分けて分析する。
 詳細は [Empirical_Analysis/README.md](Empirical_Analysis/README.md) を参照。
 
-| フォルダ | 内容 | 主なノートブック |
-|---|---|---|
-| `Skill_Gap` | 両チームの勝ち点差（シーズン終了時・暫定）の区分ごとに、次の得点までの待ち時間を比較する | `survival_final_point_gap.ipynb`, `survival_provisional_point_gap.ipynb` |
-| `Match_Status` | スコア差、直近の得点者、スコアにどちらの得点で到達したかによって、次の得点までの待ち時間を比較する | `survival_score_difference.ipynb`, `survival_recent_score.ipynb`, `survival_score_progression_patterns.ipynb` |
-| `Time_Zone` | 得点時刻の分布（ヒストグラム・カーネル密度推定） | `scoring_time.ipynb` |
-
-　各フォルダの `figures/` に図を保存している。
+- **Skill_Gap（実力差）**：両チームの実力差によって、次の得点までの待ち時間がどう変わるかを分析する。
+- **Match_Status（試合状況）**：スコア差や直前に得点したチームなど、試合状況によって次の得点までの待ち時間がどう変わるかを分析する。
+- **Time_Zone（時間帯）**：試合の時間帯によって得点の起こりやすさがどう変わるかを分析する。
 
 ## Models
 　**Empirical_Analysis** で抽出した特徴をハザードに組み込み、*Dixon&Robinson* (1998)モデルと比較する。
 詳細は [Models/README.md](Models/README.md) を参照。
-
-| ファイル | 内容 |
-|---|---|
-| `dixon_robinson_model.ipynb` | *Dixon&Robinson* (1998) モデルVI（退場者の効果なし）の実装と、各リーグ・シーズンでの推定 |
 
 ## データ
 　[StatsBomb Open Data](https://github.com/statsbomb/open-data) の以下の大会・シーズンを使用している。
