@@ -14,8 +14,7 @@ Dixon, M. J. and Robinson, M. E. (1998). *A birth process model for association 
 得点の強度（ハザード）は、両チームの実力に加えて**その時点のスコア状況**や**試合の経過時間**によって変化する。
 これにより、「リードしているチームは得点しにくくなる」「終盤ほど得点が増える」といった試合中の得点の推移を表現できる。
 
-　`dixon_robinson_model.ipynb` では、論文で最も当てはまりが良いとされる**モデルVI**を、
-退場者（レッドカード）の効果を除いた形で実装し、StatsBombデータの各リーグ・シーズンに適用している。
+　`dixon_robinson_model.ipynb` では、論文で最も当てはまりが良いとされる**モデルVI**を、StatsBombデータの各リーグ・シーズンに適用している。
 推定結果は `dixon_robinson_pure_results/` に保存される。
 
 ### 得点強度
