@@ -31,7 +31,7 @@ Soccer_Score_Progression_Analysis/
 詳細は [Empirical_Analysis/README.md](Empirical_Analysis/README.md) を参照。
 
 - **Skill_Gap（実力差）**：両チームの実力差によって、次の得点までの待ち時間がどう変わるかを分析する。
-- **Match_Status（試合状況）**：スコア差や直前に得点したチームなど、試合状況によって次の得点までの待ち時間がどう変わるかを分析する。
+- **Match_Status（試合状況）**：スコア差や直前に得点したチーム、レッドカードの有無など、試合状況によって次の得点までの待ち時間がどう変わるかを分析する。
 - **Time_Zone（時間帯）**：試合の時間帯によって得点の起こりやすさがどう変わるかを分析する。
 
 ## Models
