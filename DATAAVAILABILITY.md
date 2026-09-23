@@ -17,4 +17,4 @@
 
 > Data provided by [StatsBomb](https://statsbomb.com)
 >
-> ※StatsBomb公式のMedia Pack（ロゴ配布ページ）はブランド移行（Hudlへの統合）に伴い現在リンク切れとなっているため、テキストでのクレジット表記としています。
+> ※StatsBomb公式のMedia Pack（ロゴ配布ページ）現在リンク切れとなっているため、テキストでのクレジット表記としています。
