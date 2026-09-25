@@ -15,9 +15,9 @@
   - Frauen-Bundesliga 2023/24
   - FA Women's Super League 2018/19, 2019/20, 2020/21, 2023/24
 
+<a href="https://statsbomb.com"><img src="assets/hudl-statsbomb-logo-default.png" alt="Hudl StatsBomb" width="240"></a>
+
 > Data provided by [StatsBomb](https://statsbomb.com)
->
-> ※StatsBomb公式のMedia Pack（ロゴ配布ページ）が現在リンク切れとなっているため、テキストでのクレジット表記としています。
 
 ---
 
@@ -38,6 +38,6 @@ This data is used for research and analysis purposes, on a non-commercial basis.
   - Frauen-Bundesliga 2023/24
   - FA Women's Super League 2018/19, 2019/20, 2020/21, 2023/24
 
+<a href="https://statsbomb.com"><img src="assets/hudl-statsbomb-logo-default.png" alt="Hudl StatsBomb" width="240"></a>
+
 > Data provided by [StatsBomb](https://statsbomb.com)
->
-> *Note: StatsBomb's official Media Pack (logo download page) is currently unreachable, so a text-only credit is used here instead of the brand logo.*
