@@ -1,0 +1,12 @@
+n_matches,n_teams,n_params,log_likelihood,AIC,BIC,converged,message,league,season,file
+107,11,31,-100.3790418077562,262.7580836155124,345.6157774838315,True,Optimization terminated successfully.,FA Women's Super League,2018/2019,WSL2018-2019_goals_and_red_cards.csv
+87,12,33,-61.654549412314644,189.3090988246293,270.68406674023055,True,Optimization terminated successfully.,FA Women's Super League,2019/2020,WSL2019-2020_goals_and_red_cards.csv
+131,12,33,-94.68342952365474,255.36685904730948,350.24837071294746,True,Optimization terminated successfully.,FA Women's Super League,2020/2021,WSL2020-2021_goals_and_red_cards.csv
+132,12,33,-82.75489155037336,231.50978310074672,326.64224654609694,True,Optimization terminated successfully.,FA Women's Super League,2023/2024,WSL2023-2024_goals_and_red_cards.csv
+132,12,33,-95.36652825250033,256.73305650500066,351.86551995035086,True,Optimization terminated successfully.,Frauen Bundesliga,2023/2024,FB2023-2024_goals_and_red_cards.csv
+115,11,31,-125.59939630918268,313.19879261836536,398.29168859762615,True,Optimization terminated successfully.,Indian Super league,2021/2022,ISL2021-2022_goals_and_red_cards.csv
+380,20,49,-524.3147521443344,1146.6295042886688,1339.69789567197,True,Optimization terminated successfully.,La Liga,2015/2016,LL2015-2016_goals_and_red_cards.csv
+240,16,41,-162.9397198654142,407.8794397308284,550.58563558785,True,Optimization terminated successfully.,Liga F,2023/2024,LF2023-2024_goals_and_red_cards.csv
+377,20,49,-581.5036686631776,1261.0073373263551,1453.6873515113077,True,Optimization terminated successfully.,Ligue 1,2015/2016,L12015-2016_goals_and_red_cards.csv
+380,20,49,-555.6424533313104,1209.2849066626209,1402.353298045922,True,Optimization terminated successfully.,Premier League,2015/2016,PL2015-2016_goals_and_red_cards.csv
+380,20,49,-574.4724491004283,1246.9448982008566,1440.0132895841577,True,Optimization terminated successfully.,Serie A,2015/2016,SA2015-2016_goals_and_red_cards.csv
