@@ -79,4 +79,4 @@ Soccer_Score_Progression_Analysis/
 - Boshnakov, G., Kharrat, T. and McHale, I. G. (2017). A bivariate Weibull count model for forecasting association football scores. *International Journal of Forecasting*, 33(2), 458–466.
 - Zou, Q., Li, Q., Guo, H. and Shi, J. (2018). A discrete-time and finite-state Markov chain model for association football matches. *Communications in Statistics - Simulation and Computation*, 47, 2476–2485.
 - Zou, Q., Song, K. and Shi, J. (2020). A Bayesian in-play prediction model for association football outcomes. *Applied Sciences*, 10(8), 2904.
-- Michels, R., Ötting, M. and Karlis, D. (2024). Extending the Dixon and Coles model: an application to women's football data. *Journal of the Royal Statistical Society: Series C (Applied Statistics)*. https://doi.org/10.1093/jrsssc/qlae050
+- Michels, R., Ötting, M. and Karlis, D. (2024). Extending the Dixon and Coles model: an application to women's football data. *Journal of the Royal Statistical Society: Series C (Applied Statistics)*.
