@@ -14,6 +14,28 @@ StatsBombのイベントデータを用いて得点間の待ち時間を経験�
 1. **Empirical_Analysis**：得点間の待ち時間や我々の設定したカテゴリーごとの得点数などを分析し、ハザード、得点の起こりやすさに影響する特徴を探す。
 2. **Models**：見つけた特徴をハザードに組み込んだモデルや新しい形の確立過程モデルを作り、*Dixon&Robinson* (1998)モデルと比較する。
 
+## 主な結果（途中経過）
+　現時点で分かっていることをまとめる。研究は進行中のため、今後変わる可能性がある。
+
+### 1. 状態によって、次の得点までの待ち時間の分布が違う
+　「リード・同点・ビハインド」×「直前に得点したのは自チームか相手か」の7区分で、次の得点までの待ち時間をKaplan-Meier曲線で比べた。
+区分ごとに曲線の形が違い、スコア差だけでなく直前の得点の状況もハザードに関係しそうなことが分かる。
+この結果をもとに、*Dixon&Robinson* (1998)モデルのスコア状況の区分を7区分に置き換えた「直近得点者モデル」を作った。
+
+![直近の得点状況・リード状況別のKaplan-Meier曲線](Empirical_Analysis/Match_Status/figures/survival_recent_score_km_curves_overlay.png)
+
+### 2. 直近得点者モデルは、元のモデルよりAIC・BICが小さい
+　StatsBombの11のリーグ・シーズンで、*Dixon&Robinson* (1998)のモデルVIと直近得点者モデルを同じデータに当てはめて比べた。
+Frauen Bundesliga 2023/24は、モデルVIの推定で得点強度が負になる試合が残り、AIC・BICが信頼できないため除いた。残りの10では次のようになった。
+
+- BICは、**10すべてで直近得点者モデルのほうが小さい**（差は4.0〜14.5）。
+- AICは、**10のうち9で直近得点者モデルのほうが小さい**（差は3.6〜8.8）。FA Women's Super League 2023/24だけは、モデルVIが1.7小さい。
+- 直近得点者モデルのほうがパラメータが2個少ない（スコア状況の倍率をホームとアウェイで共有しているため）。BICの差には、この分も含まれている。
+
+![モデルVIと直近得点者モデルのAIC・BICの差](assets/model_comparison_aic_bic.png)
+
+詳しい数値は `Models/dixon_robinson_pure_results/summary_all.csv` と `Models/recent_scorer_results/summary_all.csv` にある。
+
 ## リポジトリ構成
 ```
 Soccer_Score_Progression_Analysis/
