@@ -70,4 +70,13 @@ Soccer_Score_Progression_Analysis/
 - 女子：FA Women's Super League（2018/19、2019/20、2020/21、2023/24）、Liga F 2023/24、Frauen-Bundesliga 2023/24
 
 ## 参考文献
+- Maher, M. J. (1982). Modelling association football scores. *Statistica Neerlandica*, 36(3), 109–118.
+- Dixon, M. J. and Coles, S. G. (1997). Modelling association football scores and inefficiencies in the football betting market. *Journal of the Royal Statistical Society: Series C (Applied Statistics)*, 46(2), 265–280.
 - Dixon, M. J. and Robinson, M. E. (1998). A birth process model for association football matches. *Journal of the Royal Statistical Society: Series D (The Statistician)*, 47(3), 523–538.
+- Rue, H. and Salvesen, Ø. (2000). Prediction and retrospective analysis of soccer matches in a league. *Journal of the Royal Statistical Society: Series D (The Statistician)*, 49(3), 399–418.
+- Karlis, D. and Ntzoufras, I. (2005). Bivariate Poisson and diagonal inflated bivariate Poisson regression models in R. *Journal of Statistical Software*, 14(10), 1–36.
+- Volf, P. (2009). A random point process model for the score in sport matches. *IMA Journal of Management Mathematics*, 20, 121–131.
+- Boshnakov, G., Kharrat, T. and McHale, I. G. (2017). A bivariate Weibull count model for forecasting association football scores. *International Journal of Forecasting*, 33(2), 458–466.
+- Zou, Q., Li, Q., Guo, H. and Shi, J. (2018). A discrete-time and finite-state Markov chain model for association football matches. *Communications in Statistics - Simulation and Computation*, 47, 2476–2485.
+- Zou, Q., Song, K. and Shi, J. (2020). A Bayesian in-play prediction model for association football outcomes. *Applied Sciences*, 10(8), 2904.
+- Michels, R., Ötting, M. and Karlis, D. (2024). Extending the Dixon and Coles model: an application to women's football data. *Journal of the Royal Statistical Society: Series C (Applied Statistics)*. https://doi.org/10.1093/jrsssc/qlae050
