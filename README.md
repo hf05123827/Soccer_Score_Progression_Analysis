@@ -14,6 +14,32 @@ StatsBombのイベントデータを用いて得点間の待ち時間を経験�
 1. **Empirical_Analysis**：得点間の待ち時間や我々の設定したカテゴリーごとの得点数などを分析し、ハザード、得点の起こりやすさに影響する特徴を探す。
 2. **Models**：見つけた特徴をハザードに組み込んだモデルや新しい形の確立過程モデルを作り、*Dixon&Robinson* (1998)モデルと比較する。
 
+## リポジトリ構成
+```
+Soccer_Score_Progression_Analysis/
+├── README.md
+├── DATAAVAILABILITY.md       # 使用データ（StatsBomb Open Data）について
+├── Empirical_Analysis/       # 得点間の待ち時間の経験的分析
+│   ├── Skill_Gap/            # 実力差による違い
+│   ├── Match_Status/         # 試合状況（スコア・直近の得点者）による違い
+│   ├── Time_Zone/            # 時間帯による違い
+│   └── League_Progress/      # リーグの進捗率（シーズンの序盤・中盤・終盤）による違い
+└── Models/                   # 確率モデルの実装と推定
+```
+
+## Empirical_Analysis
+　得点間の待ち時間に影響を与える要因を、**実力差**・**試合状況**・**時間帯**・**リーグの進捗**の4つに分けて分析する。
+詳細は [Empirical_Analysis/README.md](Empirical_Analysis/README.md) を参照。
+
+- **Skill_Gap（実力差）**：両チームの実力差によって、次の得点までの待ち時間がどう変わるかを分析する。
+- **Match_Status（試合状況）**：スコア差や直前に得点したチーム、レッドカードの有無など、試合状況によって次の得点までの待ち時間がどう変わるかを分析する。
+- **Time_Zone（時間帯）**：試合の時間帯によって得点の起こりやすさがどう変わるかを分析する。
+- **League_Progress（リーグの進捗）**：シーズンの進み具合（進捗率）によって、得点の起こりやすさがどう変わるかを分析する。
+
+## Models
+　**Empirical_Analysis** で抽出した特徴をハザードに組み込み、*Dixon&Robinson* (1998)モデルと比較する。
+詳細は [Models/README.md](Models/README.md) を参照。
+
 ## 主な結果（途中経過）
 　現時点で分かっていることをまとめる。研究は進行中のため、今後変わる可能性がある。
 
@@ -76,32 +102,6 @@ Frauen Bundesliga 2023/24は、モデルVIの推定で得点強度が負にな�
 ![モデルVIと直近得点者モデルのAIC・BICの差](assets/model_comparison_aic_bic.png)
 
 詳しい数値は `Models/dixon_robinson_pure_results/summary_all.csv` と `Models/recent_scorer_results/summary_all.csv` にある。
-
-## リポジトリ構成
-```
-Soccer_Score_Progression_Analysis/
-├── README.md
-├── DATAAVAILABILITY.md       # 使用データ（StatsBomb Open Data）について
-├── Empirical_Analysis/       # 得点間の待ち時間の経験的分析
-│   ├── Skill_Gap/            # 実力差による違い
-│   ├── Match_Status/         # 試合状況（スコア・直近の得点者）による違い
-│   ├── Time_Zone/            # 時間帯による違い
-│   └── League_Progress/      # リーグの進捗率（シーズンの序盤・中盤・終盤）による違い
-└── Models/                   # 確率モデルの実装と推定
-```
-
-## Empirical_Analysis
-　得点間の待ち時間に影響を与える要因を、**実力差**・**試合状況**・**時間帯**・**リーグの進捗**の4つに分けて分析する。
-詳細は [Empirical_Analysis/README.md](Empirical_Analysis/README.md) を参照。
-
-- **Skill_Gap（実力差）**：両チームの実力差によって、次の得点までの待ち時間がどう変わるかを分析する。
-- **Match_Status（試合状況）**：スコア差や直前に得点したチーム、レッドカードの有無など、試合状況によって次の得点までの待ち時間がどう変わるかを分析する。
-- **Time_Zone（時間帯）**：試合の時間帯によって得点の起こりやすさがどう変わるかを分析する。
-- **League_Progress（リーグの進捗）**：シーズンの進み具合（進捗率）によって、得点の起こりやすさがどう変わるかを分析する。
-
-## Models
-　**Empirical_Analysis** で抽出した特徴をハザードに組み込み、*Dixon&Robinson* (1998)モデルと比較する。
-詳細は [Models/README.md](Models/README.md) を参照。
 
 ## データ
 　[StatsBomb Open Data](https://github.com/statsbomb/open-data) の以下の大会・シーズンを使用している。
